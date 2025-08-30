@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <header>
+    <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">Meu<span>Portfólio</span></a>
@@ -177,11 +177,33 @@
         </div>
     </section>
 
-   <section id="contato">
-    <a href="">Whatsapp</a>
-   </section>
+    <section id="contato">
+        <div>
+            <h2>Nossos contatos</h2>
+            <div>
+                <h3>Endereço</h3>
+                <p>Rua</p>
+                <p>Cidade</p>
 
-      <footer>
+
+                <h3>Telefone</h3>
+                <p>(63) 992806564</p>
+
+                <h3>E-mail</h3>
+                <p>@gmail.com</p>
+
+                <h3>WhatsApp</h3>
+                <p>(63) 994332088</p>
+            </div>
+            
+            <div>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="logo" style="color: white;">Meu<span>Portfólio</span></div>
@@ -200,20 +222,21 @@
 </body>
 
 <script>
-        // Menu toggle functionality
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    // Menu toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
         });
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    });
+</script>
+
 </html>
