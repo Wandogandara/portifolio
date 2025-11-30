@@ -443,18 +443,45 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Floating WhatsApp */
-.fa-whatsapp {
-    position: fixed;
-    bottom: 30px; /* Afastei um pouco do rodapé */
-    right: 30px;
-    z-index: 1000;
-    width: 60px; /* Aumentei o ícone */
-    height: 60px;
-    cursor: pointer;
-    font-size: 60px;
-    color: #25d366; /* Cor oficial do WhatsApp */
-    animation: flutuando 3s ease-in-out infinite;
+
+
+/* Container que envolve os ícones */
+.social-icons-container {
+   
+    position: fixed; 
+    bottom: 40px;    
+    right: 20px;    
+    z-index: 1000;   
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+/* Estilo geral para todos os links de ícones sociais */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px; /* Tamanho ligeiramente maior para destaque */
+    height: 55px;
+    border-radius: 50%;
+    font-size: 28px; /* Ícone maior */
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px; /* Espaçamento entre ícones, se houver mais */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para o efeito flutuante */
+}
+
+/* Estilo específico para o WhatsApp */
+.social-icon.whatsapp {
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+}
+
+/* Efeito ao passar o mouse */
+.social-icon:hover {
+    background-color: #1DA851;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Footer */
