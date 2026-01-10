@@ -536,7 +536,7 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .hero-content,
     .about-content {
         flex-direction: column;
